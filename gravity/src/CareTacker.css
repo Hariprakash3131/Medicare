@@ -1,0 +1,349 @@
+/* General Body & Root Styles */
+.ct-root {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8faff;
+    min-height: 100vh;
+}
+
+.ct-main {
+    padding: 24px 8vw;
+}
+
+/* Header */
+.ct-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 8vw;
+    background-color: #fff;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.ct-header-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+}
+
+.ct-logo {
+    background: linear-gradient(45deg, #2563eb, #3b82f6);
+    color: #fff;
+    font-weight: 700;
+    font-size: 24px;
+    border-radius: 8px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ct-app-title {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.ct-app-view {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.ct-switch-btn {
+    background-color: #fff;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.2s;
+}
+
+.ct-switch-btn:hover {
+    background-color: #f9fafb;
+}
+
+/* Dashboard Card */
+.ct-dashboard-card {
+    background: linear-gradient(105deg, #22c55e 0%, #3b82f6 100%);
+    border-radius: 20px;
+    padding: 32px;
+    color: #fff;
+    margin-bottom: 24px;
+}
+
+.ct-dashboard-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.ct-dashboard-icon-bg {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.ct-dashboard-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.ct-dashboard-subtitle {
+    font-size: 16px;
+    margin: 0;
+    opacity: 0.9;
+}
+
+.ct-dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.ct-stat-item {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.ct-stat-value {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.ct-stat-label {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* Tabs */
+.ct-tabs {
+    display: flex;
+    gap: 8px;
+    border: 1px solid #e5e7eb;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 6px;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.ct-tab {
+    flex: 1;
+    border: none;
+    background-color: transparent;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #4b5563;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.ct-tab.active {
+    background-color: #fff;
+    color: #111827;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.ct-tab:not(.active):hover {
+    background-color: #f9fafb;
+}
+
+/* General Card Styles */
+.ct-card {
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 24px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.ct-card-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 16px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Cards Row */
+.ct-cards-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+/* Status Card */
+.ct-status-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background-color: #f9fafb;
+    border-radius: 10px;
+}
+
+.ct-status-title {
+    font-weight: 500;
+}
+
+.ct-status-time {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.ct-status-badge {
+    background-color: #fee2e2;
+    color: #dc2626;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 4px 8px;
+    border-radius: 9999px;
+}
+
+/* Actions Card */
+.ct-action-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    text-align: left;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    background-color: #fff;
+    margin-bottom: 12px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.ct-action-btn:last-child {
+    margin-bottom: 0;
+}
+
+.ct-action-btn:hover {
+    background-color: #f9fafb;
+}
+
+/* Progress Card */
+.ct-progress-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 8px;
+}
+
+.ct-progress-bar-container {
+    display: flex;
+    height: 12px;
+    background-color: #e5e7eb;
+    border-radius: 9999px;
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+
+.ct-progress-bar-taken {
+    background-color: #10b981;
+    width: var(--taken-width, 0%);
+}
+
+.ct-progress-bar-missed {
+    background-color: #ef4444;
+    width: var(--missed-width, 0%);
+}
+
+.ct-progress-legend {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.ct-legend-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.ct-legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.ct-legend-dot.taken { background-color: #10b981; }
+.ct-legend-dot.missed { background-color: #ef4444; }
+.ct-legend-dot.remaining { background-color: #d1d5db; }
+
+.ct-stats-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 8px;
+}
+
+.ct-stats-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(44, 130, 253, 0.04);
+}
+
+.ct-stats-table th, .ct-stats-table td {
+    padding: 14px 10px;
+    text-align: left;
+    font-size: 15px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.ct-stats-table th {
+    background: #f3f4f6;
+    color: #2563eb;
+    font-weight: 700;
+}
+
+.ct-stats-table tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+.ct-stats-table tr:hover {
+    background: #e0f2fe;
+}
+
+.ct-stats-table tr:last-child td {
+    border-bottom: none;
+}
+
+@media (max-width: 700px) {
+    .ct-stats-table {
+        min-width: 480px;
+        font-size: 13px;
+    }
+    .ct-stats-table th, .ct-stats-table td {
+        padding: 10px 6px;
+        font-size: 13px;
+    }
+} 

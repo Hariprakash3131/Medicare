@@ -1,0 +1,166 @@
+.front-root {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5fafd 0%, #e8f6ef 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+}
+.front-header {
+  margin-bottom: 24px;
+}
+.front-icon-bg {
+  background: #e0f7ef;
+  border-radius: 16px;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px auto;
+}
+.front-title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 40px;
+  margin: 0;
+}
+.front-desc {
+  text-align: center;
+  color: #555;
+  font-size: 20px;
+  margin-top: 12px;
+}
+.front-cards {
+  display: flex;
+  gap: 48px;
+  margin-top: 32px;
+}
+.front-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(44, 130, 253, 0.08);
+  padding: 36px;
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.front-avatar-patient {
+  background: #e6eeff;
+  border-radius: 12px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+.front-avatar-caretaker {
+  background: #e0f7ef;
+  border-radius: 12px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+.front-card-title-patient {
+  color: #2563eb;
+  font-weight: 700;
+  font-size: 26px;
+  margin: 0 0 8px 0;
+}
+.front-card-title-caretaker {
+  color: #16a34a;
+  font-weight: 700;
+  font-size: 26px;
+  margin: 0 0 8px 0;
+}
+.front-card-desc {
+  text-align: center;
+  color: #444;
+  font-size: 16px;
+  margin-bottom: 18px;
+}
+.front-list-patient {
+  color: #111;
+  font-size: 15px;
+  margin: 0 0 24px 0;
+  padding: 0;
+  list-style: none;
+}
+.front-list-patient li {
+  margin-bottom: 6px;
+  color: #111;
+}
+.front-list-patient li::before {
+  content: '\2022';
+  color: #2563eb;
+  font-weight: bold;
+  font-size: 1.5em;
+  display: inline-block;
+  width: 1.2em;
+  margin-left: -1.2em;
+}
+.front-list-caretaker {
+  color: #090a09;
+  font-size: 15px;
+  margin: 0 0 24px 0;
+  padding: 0;
+  list-style: none;
+}
+.front-list-caretaker li {
+  margin-bottom: 6px;
+  color: #111;
+ 
+}
+.front-list-caretaker li::before {
+  content: '\2022';
+  color: #14924a;
+  font-weight: bold;
+  font-size: 1.5em;
+  display: inline-block;
+  width: 1.2em;
+  margin-left: -1.2em;
+}
+.front-btn-patient {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  width: 100%;
+  font-weight: 600;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+.front-btn-caretaker {
+  background: #16a34a;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  width: 100%;
+  font-weight: 600;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+.front-btn-patient:disabled,
+.front-btn-caretaker:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+  background-color: #ccc !important;
+  color: #888 !important;
+  border: 1px solid #bbb !important;
+}
+.front-footer {
+  margin-top: 40px;
+  color: #888;
+  font-size: 15px;
+  text-align: center;
+}

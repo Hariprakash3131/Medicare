@@ -1,0 +1,134 @@
+/* Reset and base styles */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #fff;
+}
+
+.home-root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+.home-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: #fff;
+    border-bottom: 1px solid #e5e7eb;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.home-logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #0052cc;
+}
+
+.home-nav {
+    display: flex;
+    gap: 12px;
+}
+
+.home-nav-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all 0.2s;
+}
+
+.home-nav-btn.login {
+    background-color: #fff;
+    color: #0052cc;
+    border-color: #dee2e6;
+}
+
+.home-nav-btn.login:hover {
+    background-color: #f8f9fa;
+}
+
+.home-nav-btn.signup {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+
+.home-nav-btn.signup:hover {
+    background-color: #0069d9;
+}
+
+/* Hero Section */
+.home-hero {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 8%;
+    background: url('https://images.pexels.com/photos/263194/pexels-photo-263194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center/cover;
+    position: relative;
+    color: #fff;
+}
+
+.home-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 1;
+}
+
+.home-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+}
+
+.home-hero-title {
+    font-size: 52px;
+    font-weight: 800;
+    color: #1d2d35;
+    line-height: 1.2;
+    margin: 0 0 16px 0;
+}
+
+.home-hero-subtitle {
+    font-size: 18px;
+    color: #5a646a;
+    line-height: 1.6;
+    margin: 0 0 32px 0;
+}
+
+.home-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    transition: background-color 0.2s;
+}
+
+.home-cta-btn:hover {
+    background-color: #0069d9;
+} 

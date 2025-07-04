@@ -1,0 +1,124 @@
+.ra-card {
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 24px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.ra-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 24px 0;
+}
+
+.ra-activity-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ra-activity-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+.ra-activity-item:last-child {
+    border-bottom: 1px solid #e5e7eb;
+    margin-bottom: 0;
+}
+
+.ra-activity-icon-bg {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: bold;
+}
+
+.ra-activity-icon-bg[data-type="completed"] {
+    background-color: #d1fae5;
+    color: #067647;
+}
+
+.ra-activity-icon-bg[data-type="missed"] {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+.ra-activity-main {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-grow: 1;
+}
+
+.ra-activity-day {
+    font-weight: 600;
+}
+
+.ra-activity-status {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.ra-activity-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.ra-photo-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #fff;
+    border: 1px solid #d1d5db;
+    border-radius: 9999px;
+    padding: 6px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.ra-photo-btn:hover {
+    background-color: #f9fafb;
+}
+
+.ra-badge {
+    font-size: 12px;
+    font-weight: 500;
+    padding: 4px 10px;
+    border-radius: 9999px;
+    color: #fff;
+}
+
+.ra-badge[data-type="completed"] {
+    background-color: #f3f4f6;
+    color: #374151;
+}
+
+.ra-badge[data-type="missed"] {
+    background-color: #ef4444;
+    color: #fff;
+}
+
+@media (max-width: 640px) {
+    .ra-activity-item {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .ra-activity-actions {
+        justify-content: flex-end;
+    }
+} 

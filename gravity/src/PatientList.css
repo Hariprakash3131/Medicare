@@ -1,0 +1,189 @@
+.patient-list-root {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5fafd 0%, #e8f6ef 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0 0 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.patient-list-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px rgba(44, 130, 253, 0.08);
+  padding: 36px 32px 32px 32px;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.patient-list-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #2563eb;
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+.patient-list-table-wrapper {
+  overflow-x: auto;
+}
+
+.patient-list-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(44, 130, 253, 0.04);
+}
+
+.patient-list-table th, .patient-list-table td {
+  padding: 16px 12px;
+  text-align: left;
+  font-size: 16px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.patient-list-table th {
+  background: #f3f4f6;
+  color: #2563eb;
+  font-weight: 700;
+}
+
+.patient-list-table tr:last-child td {
+  border-bottom: none;
+}
+
+.patient-list-add-btn {
+  background: #16a34a;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 20px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s, box-shadow 0.1s;
+  box-shadow: 0 2px 8px rgba(44, 130, 253, 0.08);
+}
+
+.patient-list-add-btn:hover {
+  background: #12813a;
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 4px 16px rgba(44, 130, 253, 0.12);
+}
+
+.patient-list-loading, .patient-list-error {
+  color: #2563eb;
+  font-size: 18px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.patient-list-form {
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.patient-list-form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.patient-list-form-row select,
+.patient-list-form-row .patient-list-input {
+  padding: 8px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 15px;
+  min-width: 120px;
+  background: #f8fafc;
+  color: #222;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.patient-list-form-row select:focus,
+.patient-list-form-row .patient-list-input:focus {
+  border: 1.5px solid #2563eb;
+}
+
+.patient-list-form-row .patient-list-add-btn {
+  margin-left: 8px;
+  min-width: 90px;
+}
+
+@media (max-width: 900px) {
+  .patient-list-card {
+    padding: 18px 4vw 18px 4vw;
+    max-width: 98vw;
+  }
+  .patient-list-title {
+    font-size: 22px;
+  }
+  .patient-list-table th, .patient-list-table td {
+    padding: 10px 6px;
+    font-size: 14px;
+  }
+  .patient-list-form-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .patient-list-form-row .patient-list-add-btn {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .patient-list-card {
+    padding: 8px 2vw 8px 2vw;
+  }
+  .patient-list-title {
+    font-size: 18px;
+  }
+}
+
+.patient-list-alert {
+  margin-bottom: 16px;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  text-align: left;
+  box-shadow: 0 1px 4px rgba(44, 130, 253, 0.04);
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: fadeSlideIn 0.5s forwards, fadeSlideOut 0.5s 2.5s forwards;
+}
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeSlideOut {
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+.patient-list-alert.success {
+  background: #e6f7f2;
+  color: #12813a;
+  border: 1px solid #16a34a;
+}
+.patient-list-alert.error {
+  background: #fee2e2;
+  color: #dc2626;
+  border: 1px solid #dc2626;
+} 
