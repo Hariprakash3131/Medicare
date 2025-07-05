@@ -5,6 +5,7 @@ from flask_cors import CORS
 from dotenv import load_dotenv
 from werkzeug.security import generate_password_hash, check_password_hash
 from werkzeug.utils import secure_filename
+import secrets
 
 # Load environment variables from .env file
 load_dotenv()
@@ -298,4 +299,6 @@ def allowed_file(filename):
 # --- Main Execution ---
 if __name__ == '__main__':
     # The host '0.0.0.0' makes the server publicly available
-    app.run(host='0.0.0.0', port=5001, debug=True) 
+    app.run(host='0.0.0.0', port=5001, debug=True)
+
+app.secret_key = os.getenv('SECRET_KEY', 'k2J8n3lK9pQ1rS4vT7uW0xZ6mY3cA5eH2fG8dJ0kL1oP4qS7t')
