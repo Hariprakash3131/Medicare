@@ -17,14 +17,14 @@ CORS(app)
 
 # --- Database Connection Configuration ---
 # Load configuration from environment variables
-# app.config['MYSQL_HOST'] = os.getenv('MYSQL_HOST', 'localhost')
-# app.config['MYSQL_USER'] = os.getenv('MYSQL_USER') # Replace with your MySQL username
-# app.config['MYSQL_PASSWORD'] = os.getenv('MYSQL_PASSWORD') # Replace with your MySQL password
-# app.config['MYSQL_DB'] = os.getenv('MYSQL_DB', 'gravity_db')
-app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = 'root'  # <-- EDIT THIS
-app.config['MYSQL_PASSWORD'] = 'harip3131@' # <-- AND THIS
-app.config['MYSQL_DB'] = 'gravity_db'
+app.config['MYSQL_HOST'] = os.getenv('MYSQL_HOST', 'localhost')
+app.config['MYSQL_USER'] = os.getenv('MYSQL_USER') # Replace with your MySQL username
+app.config['MYSQL_PASSWORD'] = os.getenv('MYSQL_PASSWORD') # Replace with your MySQL password
+app.config['MYSQL_DB'] = os.getenv('MYSQL_DB', 'gravity_db')
+# app.config['MYSQL_HOST'] = 'localhost'
+# app.config['MYSQL_USER'] = 'root'  # <-- EDIT THIS
+# app.config['MYSQL_PASSWORD'] = 'harip3131@' # <-- AND THIS
+# app.config['MYSQL_DB'] = 'gravity_db'
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor' # Returns results as dictionaries
 
 UPLOAD_FOLDER = os.path.join(os.path.dirname(__file__), 'uploads')
