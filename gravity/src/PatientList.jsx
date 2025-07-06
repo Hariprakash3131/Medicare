@@ -88,7 +88,7 @@ export default function PatientList() {
   const user = JSON.parse(localStorage.getItem('user'));
 
   useEffect(() => {
-    fetch('http://127.0.0.1:5001/all-patient-stats')
+            fetch(`${import.meta.env.VITE_API_URL}/all-patient-stats`)
       .then(res => res.json())
       .then(data => {
         setPatients(data);
@@ -129,7 +129,7 @@ export default function PatientList() {
     e.preventDefault();
     const patient = patients.find(p => p.id === Number(form.patientId));
     // Send to backend
-    fetch('http://127.0.0.1:5001/medication-schedule', {
+            fetch(`${import.meta.env.VITE_API_URL}/medication-schedule`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
