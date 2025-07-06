@@ -20,7 +20,7 @@ export default function ContinuePatient() {
     useEffect(() => {
         const user = JSON.parse(localStorage.getItem('user'));
         if (user && user.id) {
-            fetch(`http://127.0.0.1:5001/medication-taken/${user.id}`)
+            fetch(`${import.meta.env.VITE_API_URL}/medication-taken/${user.id}`)
                 .then(res => res.json())
                 .then(data => {
                     if (data.taken_dates) {
@@ -59,7 +59,7 @@ export default function ContinuePatient() {
                     }
                 });
             // Fetch medication schedule for this patient
-            fetch(`http://127.0.0.1:5001/medication-schedule/${user.id}`)
+            fetch(`${import.meta.env.VITE_API_URL}/medication-schedule/${user.id}`)
                 .then(res => res.json())
                 .then(data => {
                     if (data.schedules) setMedicationSchedule(data.schedules);
@@ -119,7 +119,7 @@ export default function ContinuePatient() {
         }
 
         try {
-            const response = await fetch('http://127.0.0.1:5001/medication-taken', {
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/medication-taken`, {
                 method: 'POST',
                 body: formData,
             });
@@ -128,7 +128,7 @@ export default function ContinuePatient() {
                 alert(data.error || 'Failed to save medication record.');
             } else {
                 // Optionally, re-fetch the taken dates to ensure UI is in sync
-                fetch(`http://127.0.0.1:5001/medication-taken/${user.id}`)
+                fetch(`${import.meta.env.VITE_API_URL}/medication-taken/${user.id}`)
                     .then(res => res.json())
                     .then(data => {
                         if (data.taken_dates) setTakenDates(data.taken_dates);
@@ -327,7 +327,7 @@ export default function ContinuePatient() {
                                 ] && (
                                     <div className="cp-photo-preview">
                                         <img
-                                            src={`http://127.0.0.1:5001${photos[
+                                            src={`${import.meta.env.VITE_API_URL}${photos[
                                                 `${selectedDate.getFullYear()}-${String(selectedDate.getMonth() + 1).padStart(2, '0')}-${String(selectedDate.getDate()).padStart(2, '0')}`
                                             ]}`}
                                             style={{ maxWidth: '100%', marginTop: 8, borderRadius: 8 }}
@@ -378,7 +378,7 @@ export default function ContinuePatient() {
                                             }
                                         }
 
-                                        return (
+                                        return ( 
                                             <td key={dayIndex} className={classNames.join(" ")} onClick={() => isCurrentMonth && handleDateClick(day)}>
                                                 {day.getDate()}
                                                 {takenDates.includes(
@@ -393,7 +393,7 @@ export default function ContinuePatient() {
                                ))}
                             </tbody>
                         </table>
-                        <div className="rightcal">
+                        <div className="rightcal">      
                         <div className="cp-calendar-legend">
                             <span><span className="cp-calendar-dot cp-calendar-dot-green"></span> Medication taken</span>
                             <span><span className="cp-calendar-dot cp-calendar-dot-red"></span> Missed medication</span>
