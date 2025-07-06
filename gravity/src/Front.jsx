@@ -9,7 +9,7 @@ export default function Front() {
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem('user'));
     if (user && user.id) {
-      fetch(`http://127.0.0.1:5001/user/${user.id}`)
+              fetch(`${import.meta.env.VITE_API_URL}/user/${user.id}`)
         .then(res => res.json())
         .then(data => {
           setRole(data.role);
