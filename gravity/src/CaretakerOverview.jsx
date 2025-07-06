@@ -29,7 +29,7 @@ export default function CaretakerOverview() {
     };
 
     useEffect(() => {
-        fetch('http://127.0.0.1:5001/patients')
+        fetch(`${import.meta.env.VITE_API_URL}/patients`)
             .then(res => res.json())
             .then(data => {
                 setPatients(data);
@@ -37,7 +37,7 @@ export default function CaretakerOverview() {
     }, []);
 
     useEffect(() => {
-        fetch('http://127.0.0.1:5001/all-patient-stats')
+        fetch(`${import.meta.env.VITE_API_URL}/all-patient-stats`)
             .then(res => res.json())
             .then(data => setPatients(data));
     }, []);
